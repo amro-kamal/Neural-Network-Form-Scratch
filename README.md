@@ -53,7 +53,8 @@ The neural_net class takes for inputs:
 from neuralnetwork import neuralnetwork
 
 layers_nums_and_dim = np.array([128,10]) # Two layers neural networks
-layers_activations = np.array(['tanh','sigmoid']) #tanh for the first layer and sigmoid for the second layer.
+layers_activations = np.array(['tanh','sigmoid'])
+
 nn = neural_net(x_train , y_train , nodes_per_layer = layers_nums_and_dim, activations = layers_activations )   
 #train the network in one line of code
 loss , y_pred = nn.train(epochs=1000, lr=0.1, verbose=False)
