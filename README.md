@@ -3,14 +3,14 @@
 
 This is the code for a simple fully-connected neural network class in numpy. Using this class you can intialize and traind a MLP. The class support all the necessary function to train a neural network, including: 
 
-- [x] forward_propagation(params): To feed the input into the network and get the logits.
-- [x] back_propagation(params): Backpropagation with gradient discent.
-- [x] gradient_discent(params): Gradient Discent weights update.
-- [x] train(params): Function to train the network.
-- [x] sigmoid(params), Relu(params), tanh(params), softmax(params): Activation Functions.
-- [x] cross_entropy_loss(params), l2_loss(params): Losses.
-- [x] predict(params): A function to make inference.
-- [x] accuracy(params): For computing the accuracy of the model (for classification).
+- [x] **forward_propagation(params)**: To feed the input into the network and get the logits.
+- [x] **back_propagation(params)**: Backpropagation with gradient discent.
+- [x] **gradient_discent(params)**: Gradient Discent weights update.
+- [x] **train(params)**: Function to train the network.
+- [x] **sigmoid(params), Relu(params), tanh(params), softmax(params)**: Activation Functions.
+- [x] **cross_entropy_loss(params), l2_loss(params)**: Losses.
+- [x] **predict(params)**: A function to make inference.
+- [x] **accuracy(params)**: For computing the accuracy of the model (for classification).
 
 ## Example:
 In this example we will train a neural network on mnist dataset to test our neural network class.
@@ -44,10 +44,10 @@ y_test = torch.from_numpy(y_test)
 ### Creating and Training the model:
 We will define two-layers networks with 128 and 10 neurons (you can choose any number of layer you want).
 The neural_net class takes for inputs:
-* input:  A batch_size x input_dim numpy arry (1D vector per example).
-* labels: as one-hot vectors (numpy array).
-* nodes_per_layer: numpy array describing the number of neurons in each layer (for example np.array([128, 64, 10]) for a 3-layers * network).
-* activations: The activation function for each layer (for example: np.array(['tanh', 'tanh','sigmoid'])).
+* **input**:  A batch_size x input_dim numpy arry (1D vector per example).
+* **labels**: as one-hot vectors (numpy array).
+* **nodes_per_layer**: numpy array describing the number of neurons in each layer (for example np.array([128, 64, 10]) for a 3-layers * network).
+* **activation**s: The activation function for each layer (for example: np.array(['tanh', 'tanh','sigmoid'])).
 
 ```python
 from neuralnetwork import neuralnetwork
