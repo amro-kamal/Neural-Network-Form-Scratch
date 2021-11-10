@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import torch
 
 
-class neural_net:
+class neural_network:
   def __init__(self,input , y ,nodes_per_layer,activations , print_weights=False):
 #     x shape is  (3, 8)
 #     X  is 

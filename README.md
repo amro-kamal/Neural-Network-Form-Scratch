@@ -50,7 +50,7 @@ The neural_net class takes for inputs:
 * activations: The activation function for each layer (for example: np.array(['tanh', 'tanh','sigmoid'])).
 
 ```python
-from neural_net import neural_net
+from neuralnetwork import neuralnetwork
 
 layers_nums_and_dim = np.array([128,10]) # Two layers neural networks
 layers_activations = np.array(['tanh','sigmoid']) #tanh for the first layer and sigmoid for the second layer.
