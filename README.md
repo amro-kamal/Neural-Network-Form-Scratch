@@ -1,7 +1,7 @@
 ## Neural Network From Scratch
 
 
-This is the code for a simple fully-connected neural network class in numpy. Using this class you can intialize and train a MLP. The class support all the necessary function to train a neural network, including: 
+This is the code for a simple fully-connected neural network class in numpy. Using this class you can intialize and train a MLP. The class supports all the necessary function to train a neural network, including: 
 
 - [x] **forward_propagation(params)**: To feed the input into the network and get the logits.
 - [x] **back_propagation(params)**: Backpropagation with gradient discent.
