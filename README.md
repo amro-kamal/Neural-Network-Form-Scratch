@@ -26,7 +26,7 @@ mnist = tf.keras.datasets.mnist
 
 #preprocessing the data (normalization)
 x_train, x_test = x_train.astype('float32') / 255.0, x_test.astype('float32') / 255.0
-#minist images are grey scale images of size (28x28), we will reshape them to (28x28)
+#minist images are grey scale images of size (28, 28), we will reshape them to (28x28)
 x_train = x_train.reshape(-1 , 28*28)
 x_test = x_test.reshape(-1 , 28*28)
 x_train = torch.from_numpy(x_train)
