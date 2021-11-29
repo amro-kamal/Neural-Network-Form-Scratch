@@ -20,9 +20,7 @@ Accually we don't need Keras for training the network itself. We will use it jus
 import tensorflow as tf
 from tensorflow.keras.utils import to_categorical
 
-mnist = tf.keras.datasets.mnist
-
-(x_train, y_train),(x_test, y_test) = mnist.load_data()
+(x_train, y_train),(x_test, y_test)  = tf.keras.datasets.mnist.load_data()
 
 #preprocessing the data (normalization)
 x_train, x_test = x_train.astype('float32') / 255.0, x_test.astype('float32') / 255.0
@@ -42,17 +40,17 @@ y_test = torch.from_numpy(y_test)
 ```
 
 ### Creating and Training the model:
-We will define two-layers networks with 128 and 10 neurons (you can choose any number of layer you want).
-The neural_net class takes for inputs:
-* **input**:  A batch_size x input_dim numpy arry (1D vector per example).
-* **labels**: as one-hot vectors (numpy array).
-* **nodes_per_layer**: numpy array describing the number of neurons in each layer (for example np.array([128, 64, 10]) for a 3-layers * network).
-* **activation**s: The activation function for each layer (for example: np.array(['tanh', 'tanh','sigmoid'])).
+We will define a two-layers network with 128 and 10 neurons (you can choose any number of layers and neurons you want).
+The neural_net class constructor takes some inputs:
+* **input**:  A (batch_size x input_layer_dim) numpy array (1D vector per example).
+* **labels**: The ground truth labels As one-hot vectors (numpy array).
+* **nodes_per_layer**: numpy array describing the number of neurons in each layer (for example np.array([128, 64, 10]) for a 3-layers neural network).
+* **activation**s: numpy array representing the activation function for each layer (for example: np.array(['tanh', 'tanh','sigmoid'])).
 
 ```python
 from neuralnetwork import neuralnetwork
 
-layers_dims = np.array([128,10]) # Two layers neural networks
+layers_dims = np.array([128,10]) # Two layers neural network
 layers_activations = np.array(['tanh','sigmoid'])
 
 nn = neural_net(x_train , y_train , nodes_per_layer = layers_dims, activations = layers_activations )   
@@ -60,6 +58,9 @@ nn = neural_net(x_train , y_train , nodes_per_layer = layers_dims, activations =
 loss , y_pred = nn.train(epochs=1000, lr=0.1, verbose=False)
 
 ```
+
+![image](https://user-images.githubusercontent.com/37993690/143849146-febf160c-08b6-4fee-aebe-c537ec93ec89.png)
+
 
 ### Prediction for the test data:
 
@@ -69,3 +70,4 @@ y_pred = nn.predict( x_test )
 nn.accuracy(y_pred,y_test)
 
 ```
+
