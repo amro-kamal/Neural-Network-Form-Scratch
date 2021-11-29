@@ -59,7 +59,7 @@ loss , y_pred = nn.train(epochs=1000, lr=0.1, verbose=False)
 
 ```
 
-After finishing the training, the train(.) function will plot the training loss during training.
+After finishing the training, the train(.) function will plot the training loss during for all the epochs.
 
 ![image](https://user-images.githubusercontent.com/37993690/143849146-febf160c-08b6-4fee-aebe-c537ec93ec89.png)
 
