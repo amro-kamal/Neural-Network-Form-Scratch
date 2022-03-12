@@ -5,7 +5,7 @@ This is the code for a simple fully-connected neural network class in numpy. Usi
 
 - [x] **forward_propagation(params)**: To feed the input into the network and get the logits.
 - [x] **back_propagation(params)**: Backpropagation with gradient discent.
-- [x] **gradient_discent(params)**: Gradient Discent weights update.
+- [x] **gradient_descent(params)**: Gradient Discent weights update.
 - [x] **train(params)**: Function to train the network.
 - [x] **sigmoid(params), Relu(params), tanh(params), softmax(params)**: Activation Functions.
 - [x] **cross_entropy_loss(params), l2_loss(params)**: Losses.
